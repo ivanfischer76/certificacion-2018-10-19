@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/10/2018 08:39:03 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="poo.cursosccm.entity.Participantes" table="participantes" catalog="cursosCCM" optimistic-lock="version">
+        <id name="idparticipantes" type="int">
+            <column name="idparticipantes" />
+            <generator class="assigned" />
+        </id>
+        <property name="apellido" type="string">
+            <column name="apellido" length="50" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="100" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="15" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" not-null="true" />
+        </property>
+        <property name="fechaNac" type="date">
+            <column name="fechaNac" length="10" not-null="true" />
+        </property>
+        <property name="nombreTutor" type="string">
+            <column name="nombreTutor" length="100" />
+        </property>
+        <set name="inscripcions" table="inscripcion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="participante" not-null="true" />
+            </key>
+            <one-to-many class="poo.cursosccm.entity.Inscripcion" />
+        </set>
+    </class>
+</hibernate-mapping>
