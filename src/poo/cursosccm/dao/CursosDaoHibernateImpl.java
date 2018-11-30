@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 package poo.cursosccm.dao;
 
@@ -14,11 +12,20 @@ import org.hibernate.SessionFactory;
 import poo.cursosccm.entity.Cursos;
 import poo.cursosccm.entity.Tematicas;
 
-
+/**
+ * Clase de implementación de la interface CursosDao.
+ * Permite interactuar con la base de datos con objetos de tipo Cursos usando
+ * el framework Hibernate y su API criteria para las consultas.
+ * @author Iván Fischer
+ */
 public class CursosDaoHibernateImpl implements CursosDao {
     
     private final SessionFactory sessionFactory;
 
+    /**
+     * Constructor principal de la clase
+     * @param sessionFactory
+     */
     public CursosDaoHibernateImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }

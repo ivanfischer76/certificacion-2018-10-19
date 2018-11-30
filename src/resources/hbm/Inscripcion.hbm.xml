@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 24/10/2018 08:39:03 by Hibernate Tools 4.3.1 -->
+<!-- Generated 30/11/2018 13:07:36 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="poo.cursosccm.entity.Inscripcion" table="inscripcion" catalog="cursosCCM" optimistic-lock="version">
-        <id name="idinscripcion" type="int">
-            <column name="idinscripcion" />
-            <generator class="increment" />
+    <class name="poo.cursosccm.entity.Inscripcion" table="inscripcion" catalog="cursosCCM">
+        <id name="idInscripcion" type="int">
+            <column name="id_inscripcion" />
+            <generator class="increment"></generator>
         </id>
-        <many-to-one name="cursos" class="poo.cursosccm.entity.Cursos" fetch="select">
+        <many-to-one name="cursos" class="poo.cursosccm.entity.Cursos" update="false" insert="false" fetch="select">
             <column name="curso" not-null="true" />
         </many-to-one>
-        <many-to-one name="participantes" class="poo.cursosccm.entity.Participantes" fetch="select">
+        <many-to-one name="estadoInscripcion" class="poo.cursosccm.entity.EstadoInscripcion" fetch="select">
+            <column name="estado_inscripcion" not-null="true" />
+        </many-to-one>
+        <many-to-one name="participantes" class="poo.cursosccm.entity.Participantes" update="false" insert="false" fetch="select">
             <column name="participante" not-null="true" />
         </many-to-one>
-        <property name="condicional" type="int">
-            <column name="condicional" not-null="true" />
-        </property>
-        <property name="fechahora" type="timestamp">
-            <column name="fechahora" length="19" not-null="true" />
+        <property name="fechaHora" type="timestamp">
+            <column name="fecha_hora" length="19" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

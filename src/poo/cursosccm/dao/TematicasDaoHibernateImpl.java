@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 package poo.cursosccm.dao;
 
@@ -13,16 +11,23 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import poo.cursosccm.entity.Tematicas;
 
-
+/**
+ * Clase de implementación de la interface TematicasDao.
+ * Permite interactuar con la base de datos con objetos de tipo Tematicas usando
+ * el framework Hibernate y su API criteria para las consultas.
+ * @author Iván Fischer
+ */
 public class TematicasDaoHibernateImpl implements TematicasDao {
     
     private final SessionFactory sessionFactory;
 
+    /**
+     * Constructor principal de la clase.
+     * @param sessionFactory
+     */
     public TematicasDaoHibernateImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
-    
-    
     
     @Override
     public List<Tematicas> listarTematicas() {

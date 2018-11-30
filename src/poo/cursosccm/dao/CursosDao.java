@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 package poo.cursosccm.dao;
 
@@ -10,8 +8,8 @@ import poo.cursosccm.entity.Cursos;
 import poo.cursosccm.entity.Tematicas;
 
 /**
- *
- * @author ivan
+ * Esta interface provee mecanismos para operar con entidades de tipo Cursos
+ * @author Iván Fischer
  */
 public interface CursosDao {
     

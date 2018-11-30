@@ -10,10 +10,10 @@
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.connection.autocommit">true</property>
     <property name="current_session_context_class">thread</property>
-    <property name="hibernate.show_sql">true</property>
     <mapping resource="resources/hbm/Tematicas.hbm.xml"/>
+    <mapping resource="resources/hbm/Participantes.hbm.xml"/>
+    <mapping resource="resources/hbm/EstadoInscripcion.hbm.xml"/>
     <mapping resource="resources/hbm/Inscripcion.hbm.xml"/>
     <mapping resource="resources/hbm/Cursos.hbm.xml"/>
-    <mapping resource="resources/hbm/Participantes.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

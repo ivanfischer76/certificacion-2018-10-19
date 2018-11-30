@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
  */
 package poo.cursosccm.controller;
 
@@ -11,13 +9,15 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 /**
- *
- * @author ivan
+ * Clase Principal del proyecto que da inicio a la ejecución
+ * @author Iván Fischer
  */
 public class Main {
 
     /**
-     * @param args the command line arguments
+     * Mátodo principal que proporciona una instancia de SessionFactory para 
+     * las clases que lo necesiten.
+     * @param args los argumentos de la línea de comandos.
      */
     public static void main(String[] args) {
         SessionFactory sessionFactory = null;        

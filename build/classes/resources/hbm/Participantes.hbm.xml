@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 24/10/2018 08:39:03 by Hibernate Tools 4.3.1 -->
+<!-- Generated 30/11/2018 13:07:36 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="poo.cursosccm.entity.Participantes" table="participantes" catalog="cursosCCM" optimistic-lock="version">
-        <id name="idparticipantes" type="int">
-            <column name="idparticipantes" />
-            <generator class="assigned" />
+    <class name="poo.cursosccm.entity.Participantes" table="participantes" catalog="cursosCCM">
+        <id name="idParticipante" type="int">
+            <column name="id_participante" />
+            <generator class="increment"></generator>
         </id>
         <property name="apellido" type="string">
             <column name="apellido" length="50" not-null="true" />
@@ -23,17 +23,17 @@
         <property name="email" type="string">
             <column name="email" length="100" not-null="true" />
         </property>
-        <property name="fechaNac" type="date">
-            <column name="fechaNac" length="10" not-null="true" />
+        <property name="fechaNacimiento" type="date">
+            <column name="fecha_nacimiento" length="10" not-null="true" />
         </property>
         <property name="nombreTutor" type="string">
-            <column name="nombreTutor" length="100" />
+            <column name="nombre_tutor" length="100" />
         </property>
-        <set name="inscripcions" table="inscripcion" inverse="true" lazy="true" fetch="select">
+        <bag name="inscripciones" table="inscripcion" inverse="false" lazy="false" cascade="all">
             <key>
                 <column name="participante" not-null="true" />
             </key>
             <one-to-many class="poo.cursosccm.entity.Inscripcion" />
-        </set>
+        </bag>
     </class>
 </hibernate-mapping>

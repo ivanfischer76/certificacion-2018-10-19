@@ -57,7 +57,6 @@ public class TematicasComboBoxModel extends AbstractListModel implements ComboBo
         return tematicas.get(indice);
     }
 
-   
 }
 
 
